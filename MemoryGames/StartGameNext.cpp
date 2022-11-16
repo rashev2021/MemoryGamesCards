@@ -18,11 +18,12 @@ void StartGameNext_4x2(char a, char a1, char b, char b1, char c, char c1, char d
 		if (a == ' ' && c == ' ' && b == ' ' && c1 == ' ' && d == ' ' && a1 == ' ' && b1 == ' ' && d1 == ' ')
 		{
 			PlaySound(TEXT("winner.wav"), NULL, SND_FILENAME | SND_ASYNC);
-			cout << endl << "\t\t\t\t\t\t\t Победа!!! Все карты раскрыты!!!" << endl;
-			cout << endl << "\t\t\t\t\t\t\t Количество совпадений: " << doc.concidences << endl;
-			cout << endl << "\t\t\t\t\t\t\t Количество неверных ходов: " << doc.count << endl << endl;
-			cout << endl << "\t\t\t\t\t\t\t Сейчас вы будете перенаправлены в меню. " << endl << endl;
-			Card_4x2(a, a1, b, b1, c, c1, d, d1, f, f1, f2, f3, f4, f5, f6, f7);
+			cout << endl << "\t\t\t\t\t\t\t  Победа!!! Все карты раскрыты!!!" << endl;
+			cout << endl << "\t\t\t\t\t\t\t  Количество совпадений: " << doc.concidences << endl;
+			cout << endl << "\t\t\t\t\t\t\t  Количество неверных ходов: " << doc.count << endl << endl;
+			cout << endl << "\t\t\t\t\t\t\t  Сейчас вы будете перенаправлены в меню. " << endl << endl;
+			
+			Card_4x2(a = '!', a1 = '*', b = '@', b1 = '$', c = '!', c1 = '@', d = '*', d1 = '$', f, f1, f2, f3, f4, f5, f6, f7);
 		
 			Sleep(5100);
 			system("cls");

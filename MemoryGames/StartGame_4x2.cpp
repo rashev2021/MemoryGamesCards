@@ -28,9 +28,9 @@ void StartGame_4x2(County doc)
 
 		if (p > '8' || p == '0')
 		{
-			cout << endl << "\t\t\t\t\t\t\t Такой карты нет. Повторите попытку..." << endl;
-			cout << endl << "\t\t\t\t\t\t\t Откройте две любые карты." << endl;
-			cout << endl << "\t\t\t\t\t\t\t Первая карта: ";
+			cout << endl << "\t\t\t\t\t\t\t Такой карты нет. Повторите попытку..." << endl << endl;
+			cout << "\t\t\t\t\t\t\t Откройте две любые карты." << endl;
+			cout << "\t\t\t\t\t\t\t Выберите одну из карт и нажмите Enter: ";
 		}
 		if (p == '1')
 		{
