@@ -103,7 +103,7 @@ void Menu()
 			break;
 		}
 
-	} while (true);
+	} while (i != '0');
 }
 
 

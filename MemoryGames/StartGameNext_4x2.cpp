@@ -25,7 +25,6 @@ void StartGameNext_4x2(char a, char a1, char b, char b1, char c, char c1, char d
 			
 		Card_4x2(a = '!', a1 = '*', b = '@', b1 = '$', c = '!', c1 = '@', d = '*', d1 = '$', f, f1, f2, f3, f4, f5, f6, f7);
 		
-
 		Sleep(5100);
 		system("cls");
 		Menu();
