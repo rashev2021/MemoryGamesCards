@@ -128,10 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Card_4x2.cpp" />
+    <ClCompile Include="Card_4x3.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MemoryGames.cpp" />
-    <ClCompile Include="StartGameNext.cpp" />
+    <ClCompile Include="StartGameNext_4x2.cpp" />
+    <ClCompile Include="StartGameNext_4x3.cpp" />
     <ClCompile Include="StartGame_4x2.cpp" />
+    <ClCompile Include="StartGame_4x3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Default.h" />

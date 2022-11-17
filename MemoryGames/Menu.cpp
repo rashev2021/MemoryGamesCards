@@ -2,13 +2,10 @@
 #include <Windows.h>
 #include <iostream>
 
-
 using namespace std;
-
 
 void Menu()
 {
-
 	PlaySound(TEXT("menu.wav"), NULL, SND_FILENAME | SND_ASYNC);
 
 	cout << endl << endl;
@@ -21,9 +18,9 @@ void Menu()
 
 	cout << "\t\t\t\t\t\t #########################################################" << endl;
 	cout << "\t\t\t\t\t\t ###############       ÌÅÍÞ ÈÃÐÛ       ###################" << endl << endl;
-	cout << "\t\t\t\t\t\t #### ÂÛÁÐÀÒÜ ÈÃÐÎÂÎÅ ÏÎËÅ 4õ2 -------- ÍÀÆÌÈÒÅ [1] ######" << endl;
-	cout << "\t\t\t\t\t\t #### ÂÛÁÐÀÒÜ ÈÃÐÎÂÎÅ ÏÎËÅ 4õ3 -------- ÍÀÆÌÈÒÅ [2] ######" << endl;
-	cout << "\t\t\t\t\t\t #### ÏÎÊÈÍÓÒÜ ÈÃÐÓ            -------- ÍÀÆÌÈÒÅ [0] ######" << endl;
+	cout << "\t\t\t\t\t\t #### ÂÛÁÐÀÒÜ ÈÃÐÎÂÎÅ ÏÎËÅ 4õ2 (8 êàðò)  - ÍÀÆÌÈÒÅ [1] ###" << endl;
+	cout << "\t\t\t\t\t\t #### ÂÛÁÐÀÒÜ ÈÃÐÎÂÎÅ ÏÎËÅ 4õ3 (12 êàðò) - ÍÀÆÌÈÒÅ [2] ###" << endl;
+	cout << "\t\t\t\t\t\t #### ÏÎÊÈÍÓÒÜ ÈÃÐÓ                      - ÍÀÆÌÈÒÅ [0] ###" << endl;
 	cout << "\t\t\t\t\t\t #########################################################" << endl;
 	cout << "\t\t\t\t\t\t #### ÑÄÅËÀÉÒÅ ÑÂÎÉ ÂÛÁÎÐ È ÍÀÆÌÈÒÅ ENTER:  ";
 
@@ -42,7 +39,7 @@ void Menu()
 		{
 		case '1':
 			
-			cout << endl << endl << "\t\t\t\t\t\t Âûáðàíî èãðîâîå ïîëå 4õ2." << endl;
+			cout << endl << endl << "\t\t\t\t\t\t Âûáðàíî èãðîâîå ïîëå 4õ2 (8 êàðò)." << endl;
 			cout << "\t\t\t\t\t\t Èäåò çàãðóçêà ";
 			PlaySound(TEXT("start.wav"), NULL, SND_FILENAME | SND_ASYNC);
 			Sleep(1000);
@@ -69,15 +66,35 @@ void Menu()
 			break;
 
 		case '2':
-			cout << endl << endl << "\t\t\t\t\t\t Â ðàçðàáîòêå." << endl;
+			cout << endl << endl << "\t\t\t\t\t\t Âûáðàíî èãðîâîå ïîëå 4õ3 (12 êàðò)." << endl;
+			cout << "\t\t\t\t\t\t Èäåò çàãðóçêà ";
+			PlaySound(TEXT("start.wav"), NULL, SND_FILENAME | SND_ASYNC);
 			Sleep(1000);
+			cout << " .";
+			Sleep(1000);
+			cout << " .";
+			Sleep(1000);
+			cout << " .";
+			Sleep(1000);
+			cout << " .";
+			Sleep(1000);
+			cout << " .";
+			Sleep(1000);
+			cout << " .";
+			Sleep(1000);
+			cout << " .";
+			Sleep(1000);
+			cout << " .";
+			Sleep(1000);
+			cout << endl << endl << endl << endl << "\t\t\t\t\t\t ##################### ÈÃÐÀ ÍÀ×ÀËÀÑÜ #####################" << endl;
+			Sleep(1500);
 			system("cls");
-			Menu();
+			StartGame_4x3(doc);
 			break;
 
 		case '0':
 			cout << endl << "\t\t\t\t\t\t Âû ïîêèíóëè èãðó." << endl;
-			return;
+			break;
 
 		default:
 			PlaySound(TEXT("fail.wav"), NULL, SND_FILENAME | SND_ASYNC);

@@ -4,11 +4,11 @@
 
 using namespace std;
 
-void Examination_4x2(char a, char a1, char b, char b1, char c, char c1, char d, char d1, char f, char f1, char f2, char f3, char f4, char f5, char f6, char f7, County doc)
+void Examination_4x3(char a, char a1, char b, char b1, char c, char c1, char d, char d1, char e1, char g1, char h1, char k1, char f, char f1, char f2, char f3, char f4, char f5, char f6, char f7, char f8, char f9, char f10, char f11, County doc)
 {
 	char o;
 
-	if (a == '!' && c == '!' || b == '@' && c1 == '@' || d == '*' && a1 == '*' || b1 == '$' && d1 == '$')
+	if (a == '5' && c == '5' || b == '8' && d == '8' || c1 == '6' && a1 == '6' || b1 == '3' && d1 == '3' || e1 == '4' && h1 == '4' || g1 == '2' && k1 == '2')
 	{
 		doc.concidences++;
 		PlaySound(TEXT("win2.wav"), NULL, SND_FILENAME | SND_ASYNC);
@@ -19,21 +19,29 @@ void Examination_4x2(char a, char a1, char b, char b1, char c, char c1, char d, 
 		cout << "\t\t\t\t\t\t\t Выйти в меню       - нажмите [2]" << endl;
 		cout << "\t\t\t\t\t\t\t Сделайте свой выбор и нажмите Enter: ";
 
-		if(a == '!' && c == '!')
+		if (a == '5' && c == '5')
 		{
 			a = c = f = f2 = ' ';
 		}
-		if(b == '@' && c1 == '@')
+		if (b == '8' && d == '8')
 		{
-			b = c1 = f1 = f6 = ' ';
+			b = d = f1 = f3 = ' ';
 		}
-		if(d == '*' && a1 == '*')
+		if (c1 == '6' && a1 == '6')
 		{
-			d = a1 = f3 = f4 = ' ';
+			c1 = a1 = f3 = f6 = ' ';
 		}
-		if(b1 == '$' && d1 == '$')
+		if (b1 == '3' && d1 == '3')
 		{
 			b1 = d1 = f5 = f7 = ' ';
+		}
+		if (e1 == '4' && h1 == '4')
+		{
+			e1 = h1 = f8 = f10 = ' ';
+		}
+		if (g1 == '2' && k1 == '2')
+		{
+			g1 = k1 = f9 = f11 = ' ';
 		}
 
 		do
@@ -45,7 +53,7 @@ void Examination_4x2(char a, char a1, char b, char b1, char c, char c1, char d, 
 			{
 			case '1':
 				system("cls");
-				StartGameNext_4x2(a,a1,b,b1,c,c1,d,d1,f,f1,f2,f3,f4,f5,f6,f7,doc);
+				StartGameNext_4x3(a, a1, b, b1, c, c1, d, d1, e1, g1, h1, k1, f, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, doc);
 				break;
 
 			case '2':
@@ -67,11 +75,11 @@ void Examination_4x2(char a, char a1, char b, char b1, char c, char c1, char d, 
 		system("cls");
 		doc.count++;
 		PlaySound(TEXT("error.wav"), NULL, SND_FILENAME | SND_ASYNC);
-		Card_4x2(a, a1, b, b1, c, c1, d, d1, f, f1, f2, f3, f4, f5, f6, f7);
+		Card_4x3(a, a1, b, b1, c, c1, d, d1, e1, g1, h1, k1, f, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11);
 		cout << endl << "\t\t\t\t\t\t\t Совпадений не найдено" << endl << endl;
 		cout << endl << "\t\t\t\t\t\t\t Количество переворотов карт: " << doc.count << endl << endl;
 		Sleep(1500);
-		
+
 		cout << "\t\t\t\t\t\t\t Начать игру заново    - нажмите [1]" << endl;
 		cout << "\t\t\t\t\t\t\t Выйти в меню          - нажмите [2]" << endl;
 		cout << "\t\t\t\t\t\t\t Сделайте свой выбор и нажмите Enter: ";
@@ -85,7 +93,7 @@ void Examination_4x2(char a, char a1, char b, char b1, char c, char c1, char d, 
 			{
 			case '1':
 				system("cls");
-				StartGame_4x2(doc);
+				StartGame_4x3(doc);
 				break;
 
 			case '2':
@@ -103,9 +111,8 @@ void Examination_4x2(char a, char a1, char b, char b1, char c, char c1, char d, 
 	}
 }
 
-void Card_4x2(char a,char a1,char b,char b1,char c,char c1,char d,char d1, char f , char f1, char f2, char f3, char f4, char f5, char f6, char f7)
+void Card_4x3(char a, char a1, char b, char b1, char c, char c1, char d, char d1, char e1, char g1, char h1, char k1, char f, char f1, char f2, char f3, char f4, char f5, char f6, char f7, char f8, char f9, char f10, char f11)
 {
-	
 	//первый ряд
 	cout << endl << "\t\t\t\t\t\t\t  -" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "  "
 		<< "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "  "
@@ -187,4 +194,46 @@ void Card_4x2(char a,char a1,char b,char b1,char c,char c1,char d,char d1, char 
 		<< "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "  "
 		<< "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "  "
 		<< "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "  " << endl;
+
+	//третий ряд
+	cout << "\t\t\t\t\t\t\t  -" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "  "
+		<< "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "  "
+		<< "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "  "
+		<< "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "  " << endl;
+
+	cout << "\t\t\t\t\t\t\t | " << e1 << " " << f8 << " " << f8 << " " << e1 << " |" <<
+		"| " << g1 << " " << f9 << " " << f9 << " " << g1 << " |" <<
+		"| " << h1 << " " << f10 << " " << f10 << " " << h1 << " |" <<
+		"| " << k1 << " " << f11 << " " << f11 << " " << k1 << " |" << endl;
+
+	cout << "\t\t\t\t\t\t\t | " << f8 << " " << f8 << " " << f8 << " " << f8 << " |" <<
+		"| " << f9 << " " << f9 << " " << f9 << " " << f9 << " |" <<
+		"| " << f10 << " " << f10 << " " << f10 << " " << f10 << " |" <<
+		"| " << f11 << " " << f11 << " " << f11 << " " << f11 << " |" << endl;
+
+	cout << "\t\t\t\t\t\t\t | " << f8 << " " << e1 << " " << e1 << " " << f8 << " |" <<
+		"| " << f9 << " " << g1 << " " << g1 << " " << f9 << " |" <<
+		"| " << f10 << " " << h1 << " " << h1 << " " << f10 << " |" <<
+		"| " << f11 << " " << k1 << " " << k1 << " " << f11 << " |" << endl;
+
+	cout << "\t\t\t\t\t\t\t | " << f8 << " " << e1 << " " << e1 << " " << f8 << " |" <<
+		"| " << f9 << " " << g1 << " " << g1 << " " << f9 << " |" <<
+		"| " << f10 << " " << h1 << " " << h1 << " " << f10 << " |" <<
+		"| " << f11 << " " << k1 << " " << k1 << " " << f11 << " |" << endl;
+
+	cout << "\t\t\t\t\t\t\t | " << f8 << " " << f8 << " " << f8 << " " << f8 << " |" <<
+		"| " << f9 << " " << f9 << " " << f9 << " " << f9 << " |" <<
+		"| " << f10 << " " << f10 << " " << f10 << " " << f10 << " |" <<
+		"| " << f11 << " " << f11 << " " << f11 << " " << f11 << " |" << endl;
+
+	cout << "\t\t\t\t\t\t\t | " << e1 << " " << f8 << " " << f8 << " " << e1 << " |" <<
+		"| " << g1 << " " << f9 << " " << f9 << " " << g1 << " |" <<
+		"| " << h1 << " " << f10 << " " << f10 << " " << h1 << " |" <<
+		"| " << k1 << " " << f11 << " " << f11 << " " << k1 << " |" << endl;
+
+	cout << "\t\t\t\t\t\t\t  -" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "  "
+		<< "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "  "
+		<< "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "  "
+		<< "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "-" << "  " << endl;
+
 }
