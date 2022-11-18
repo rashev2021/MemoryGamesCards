@@ -5,10 +5,8 @@
 
 using namespace std;
 
-
 void Menu()
 {
-
 	PlaySound(TEXT("menu.wav"), NULL, SND_FILENAME | SND_ASYNC);
 
 	cout << endl << endl;
