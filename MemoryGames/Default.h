@@ -1,10 +1,12 @@
-#include <Windows.h>
+
 #pragma once
 
 struct County
 {
 	int count = 0;
 	int concidences = 0;
+	int start = 0;
+	int end = 0;
 	int timer = 0;
 };
 

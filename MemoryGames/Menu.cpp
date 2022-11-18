@@ -1,20 +1,10 @@
 #include "Default.h"
 #include <Windows.h>
 #include <iostream>
+#include <ctime>
 
 using namespace std;
 
-void Timer(County doc)
-{
-	int p = 10;
-
-	for (int i = 0; i < p; i++)
-	{
-		++p;
-		++doc.timer;
-		Sleep(1000);
-	}
-}
 
 void Menu()
 {
@@ -76,7 +66,6 @@ void Menu()
 			Sleep(1500);
 			system("cls");
 			StartGame_4x2(doc);
-			Timer(doc);
 			break;
 
 		case '2':

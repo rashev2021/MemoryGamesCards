@@ -18,6 +18,8 @@ void StartGameNext_4x2(char a, char a1, char b, char b1, char c, char c1, char d
 	if (a == ' ' && c == ' ' && b == ' ' && c1 == ' ' && d == ' ' && a1 == ' ' && b1 == ' ' && d1 == ' ')
 	{
 		PlaySound(TEXT("winner.wav"), NULL, SND_FILENAME | SND_ASYNC);
+		doc.end = clock();
+		doc.timer = (doc.end - doc.start) / CLOCKS_PER_SEC;
 		cout << endl << "\t\t\t\t\t\t\t  Победа!!! Все карты раскрыты!!!" << endl;
 		cout << endl << "\t\t\t\t\t\t\t  Время игры: " << doc.timer << endl;
 		cout << endl << "\t\t\t\t\t\t\t  Количество совпадений: " << doc.concidences << endl;

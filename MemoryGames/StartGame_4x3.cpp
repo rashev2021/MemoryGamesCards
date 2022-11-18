@@ -10,6 +10,8 @@ void StartGame_4x3(County doc)
 	char a, a1, b, b1, c, c1, d, d1, e1, g1, h1, k1, f, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11;
 	a = a1 = b = b1 = c = b = c1 = d = d1 = e1 = g1 = h1 = k1 = f = f1 = f2 = f3 = f4 = f5 = f6 = f7 = f8 = f9 = f10 = f11 = '#';
 
+	doc.start = clock();
+
 	int p;
 	int p1;
 
