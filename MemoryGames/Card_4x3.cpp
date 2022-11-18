@@ -6,6 +6,9 @@ using namespace std;
 
 void Examination_4x3(char a, char a1, char b, char b1, char c, char c1, char d, char d1, char e1, char g1, char h1, char k1, char f, char f1, char f2, char f3, char f4, char f5, char f6, char f7, char f8, char f9, char f10, char f11, County doc)
 {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
 	char o;
 
 	if (a == '5' && c == '5' || b == '8' && d == '8' || c1 == '6' && a1 == '6' || b1 == '3' && d1 == '3' || e1 == '4' && h1 == '4' || g1 == '2' && k1 == '2')

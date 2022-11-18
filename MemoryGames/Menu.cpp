@@ -8,6 +8,9 @@ using namespace std;
 
 void Menu()
 {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
 	PlaySound(TEXT("menu.wav"), NULL, SND_FILENAME | SND_ASYNC);
 
 	cout << endl << endl;
