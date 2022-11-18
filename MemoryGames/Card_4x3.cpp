@@ -6,8 +6,6 @@ using namespace std;
 
 void Examination_4x3(char a, char a1, char b, char b1, char c, char c1, char d, char d1, char e1, char g1, char h1, char k1, char f, char f1, char f2, char f3, char f4, char f5, char f6, char f7, char f8, char f9, char f10, char f11, County doc)
 {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
 
 	char o;
 
