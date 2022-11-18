@@ -4,6 +4,18 @@
 
 using namespace std;
 
+void Timer(County doc)
+{
+	int p = 10;
+
+	for (int i = 0; i < p; i++)
+	{
+		++p;
+		++doc.timer;
+		Sleep(1000);
+	}
+}
+
 void Menu()
 {
 	PlaySound(TEXT("menu.wav"), NULL, SND_FILENAME | SND_ASYNC);
@@ -28,6 +40,7 @@ void Menu()
 	County doc;
 	doc.count = 0;
 	doc.concidences = 0;
+	doc.timer = 0;
 	
 	do
 	{
@@ -63,6 +76,7 @@ void Menu()
 			Sleep(1500);
 			system("cls");
 			StartGame_4x2(doc);
+			Timer(doc);
 			break;
 
 		case '2':

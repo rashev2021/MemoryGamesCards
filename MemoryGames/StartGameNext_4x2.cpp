@@ -19,6 +19,7 @@ void StartGameNext_4x2(char a, char a1, char b, char b1, char c, char c1, char d
 	{
 		PlaySound(TEXT("winner.wav"), NULL, SND_FILENAME | SND_ASYNC);
 		cout << endl << "\t\t\t\t\t\t\t  Победа!!! Все карты раскрыты!!!" << endl;
+		cout << endl << "\t\t\t\t\t\t\t  Время игры: " << doc.timer << endl;
 		cout << endl << "\t\t\t\t\t\t\t  Количество совпадений: " << doc.concidences << endl;
 		cout << endl << "\t\t\t\t\t\t\t  Количество неверных ходов: " << doc.count << endl << endl;
 		cout << endl << "\t\t\t\t\t\t\t  Сейчас вы будете перенаправлены в меню. " << endl << endl;

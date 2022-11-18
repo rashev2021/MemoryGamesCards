@@ -13,6 +13,7 @@ void Examination_4x3(char a, char a1, char b, char b1, char c, char c1, char d, 
 		doc.concidences++;
 		PlaySound(TEXT("win2.wav"), NULL, SND_FILENAME | SND_ASYNC);
 		cout << endl << "\t\t\t\t\t\t\t Найдено совпадение." << endl;
+		cout << endl << "\t\t\t\t\t\t\t Время игры: " << doc.timer << endl;
 		cout << endl << "\t\t\t\t\t\t\t Количество совпадений: " << doc.concidences << endl << endl;
 		Sleep(1500);
 		cout << "\t\t\t\t\t\t\t Продолжить игру    - нажмите [1]" << endl;
