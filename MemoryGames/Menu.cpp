@@ -105,7 +105,7 @@ void Menu()
 			break;
 		}
 
-	} while (i != '0');
+	} while (i == '0');
 }
 
 
